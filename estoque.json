@@ -1,0 +1,132 @@
+{
+    "losartana": {
+        "tipo": "antihipertensivo",
+        "caso_uso": ["pressão alta", "insuficiência cardíaca"],
+        "preco_unidade": 3.80,
+        "preco_unidade_ideal": 5.0,
+        "presente": {
+            "tatuape": {"quantidade": 63, "ideal": 80},
+            "santo amaro": {"quantidade": 89, "ideal": 110},
+            "butanta": {"quantidade": 91, "ideal": 100},
+            "lapa": {"quantidade": 74, "ideal": 90},
+            "marginal": {"quantidade": 98, "ideal": 120}
+        }
+    },
+    "clonazepam": {
+        "tipo": "ansiolítico",
+        "caso_uso": ["ansiedade", "crises convulsivas"],
+        "preco_unidade": 6.20,
+        "preco_unidade_ideal": 7.5,
+        "presente": {
+            "paulista": {"quantidade": 47, "ideal": 90},
+            "ibirapuera": {"quantidade": 35, "ideal": 85},
+            "tatuape": {"quantidade": 28, "ideal": 75},
+            "lapa": {"quantidade": 40, "ideal": 80},
+            "marginal": {"quantidade": 48, "ideal": 95}
+        }
+    },
+    "omeprazol": {
+        "tipo": "antiácido",
+        "caso_uso": ["azia", "refluxo"],
+        "preco_unidade": 2.90,
+        "preco_unidade_ideal": 4.2,
+        "presente": {
+            "ibirapuera": {"quantidade": 99, "ideal": 105},
+            "pinheiros": {"quantidade": 130, "ideal": 130},
+            "santana": {"quantidade": 115, "ideal": 120},
+            "santo amaro": {"quantidade": 122, "ideal": 110},
+            "lapa": {"quantidade": 110, "ideal": 115}
+        }
+    },
+    "metformina": {
+        "tipo": "antidiabético",
+        "caso_uso": ["diabetes tipo 2"],
+        "preco_unidade": 3.30,
+        "preco_unidade_ideal": 4.8,
+        "presente": {
+            "ibirapuera": {"quantidade": 60, "ideal": 90},
+            "pinheiros": {"quantidade": 90, "ideal": 110},
+            "tatuape": {"quantidade": 64, "ideal": 85},
+            "santo amaro": {"quantidade": 81, "ideal": 105},
+            "marginal": {"quantidade": 86, "ideal": 115}
+        }
+    },
+    "loratadina": {
+        "tipo": "antialérgico",
+        "caso_uso": ["alergia", "rinite"],
+        "preco_unidade": 2.10,
+        "preco_unidade_ideal": 3.2,
+        "presente": {
+            "paulista": {"quantidade": 66, "ideal": 95},
+            "moca": {"quantidade": 59, "ideal": 90},
+            "pinheiros": {"quantidade": 71, "ideal": 100},
+            "santana": {"quantidade": 61, "ideal": 85},
+            "butanta": {"quantidade": 65, "ideal": 90}
+        }
+    },
+    "amoxicilina": {
+        "tipo": "antibiótico",
+        "caso_uso": ["infecções bacterianas", "amigdalite"],
+        "preco_unidade": 5.10,
+        "preco_unidade_ideal": 6.5,
+        "presente": {
+            "moca": {"quantidade": 52, "ideal": 85},
+            "vila mariana": {"quantidade": 64, "ideal": 95},
+            "santana": {"quantidade": 58, "ideal": 90},
+            "paulista": {"quantidade": 49, "ideal": 80},
+            "marginal": {"quantidade": 57, "ideal": 100}
+        }
+    },
+    "sinvastatina": {
+        "tipo": "hipolipemiante",
+        "caso_uso": ["colesterol alto", "prevenção cardiovascular"],
+        "preco_unidade": 4.40,
+        "preco_unidade_ideal": 5.8,
+        "presente": {
+            "butanta": {"quantidade": 62, "ideal": 85},
+            "vila mariana": {"quantidade": 71, "ideal": 90},
+            "lapa": {"quantidade": 79, "ideal": 100},
+            "pinheiros": {"quantidade": 85, "ideal": 110},
+            "tatuape": {"quantidade": 69, "ideal": 95}
+        }
+    },
+    "dipirona": {
+        "tipo": "analgésico e antipirético",
+        "caso_uso": ["dor", "febre"],
+        "preco_unidade": 1.80,
+        "preco_unidade_ideal": 2.5,
+        "presente": {
+            "santo amaro": {"quantidade": 92, "ideal": 120},
+            "ibirapuera": {"quantidade": 78, "ideal": 95},
+            "moca": {"quantidade": 87, "ideal": 100},
+            "vila mariana": {"quantidade": 66, "ideal": 90},
+            "pinheiros": {"quantidade": 90, "ideal": 110}
+        }
+    },
+    "cetirizina": {
+        "tipo": "antialérgico",
+        "caso_uso": ["alergia", "urticária"],
+        "preco_unidade": 2.40,
+        "preco_unidade_ideal": 3.0,
+        "presente": {
+            "santana": {"quantidade": 50, "ideal": 80},
+            "tatuape": {"quantidade": 48, "ideal": 85},
+            "butanta": {"quantidade": 53, "ideal": 90},
+            "lapa": {"quantidade": 59, "ideal": 95},
+            "moca": {"quantidade": 60, "ideal": 100}
+        }
+    },
+    "enalapril": {
+        "tipo": "antihipertensivo",
+        "caso_uso": ["hipertensão", "insuficiência cardíaca"],
+        "preco_unidade": 3.60,
+        "preco_unidade_ideal": 4.5,
+        "presente": {
+            "paulista": {"quantidade": 72, "ideal": 90},
+            "vila mariana": {"quantidade": 88, "ideal": 100},
+            "butanta": {"quantidade": 69, "ideal": 85},
+            "pinheiros": {"quantidade": 77, "ideal": 105},
+            "marginal": {"quantidade": 82, "ideal": 115}
+        }
+    }
+}
