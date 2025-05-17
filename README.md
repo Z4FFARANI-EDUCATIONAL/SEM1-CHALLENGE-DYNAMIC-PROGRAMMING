@@ -10,11 +10,11 @@
 <br>
 
 # PROJETO
-A **[FIAP](https://www.fiap.com.br)**, com o objetivo de auxiliar a rede de saúde integrada **[DASA](https://dasa.com.br)** na distribuição eficiente de estoques – entre outros processos internos – incentivou a criação de um sistema de controle de estoques de medicamentos.
+A **[FIAP](https://www.fiap.com.br)**, com o objetivo de auxiliar a rede de saúde integrada **[DASA](https://dasa.com.br)** no aprimoramento de seus processos internos, incentivou a criação de um sistema de controle de estoques dinâmico.
 
 O projeto permite consultar, cadastrar e gerenciar dados como preços, locais de armazenamento, estoques ideais e simulações logísticas de movimentação de itens com base nos métodos FIFO (First in, first out), LIFO (Last in, first out), e busca binária.
 
-A ferramenta visa apoiar decisões sobre compras, redistribuições e balanceamento de estoque entre unidades de saúde. O sistema é operado via terminal e utiliza um arquivo `JSON` para armazenamento dinâmico dos dados.
+A ferramenta visa apoiar decisões sobre compras, redistribuições e balanceamento de estoque entre unidades da rede. O sistema é operado via terminal e utiliza um arquivo `JSON` para armazenamento dinâmico dos dados.
 
 <br>
 
@@ -33,7 +33,7 @@ cd SEM1-CHALLENGE-DYNAMIC-PROGRAMMING
    
 4. O programa permite visualizar medicamentos disponíveis, consultar dados por nome, unidade ou tipo, além de realizar cadastros e atualizações em tempo real.
 
-5. Simulações com FIFO, LIFO, e busca binária podem ser acessadas em respectivos menus após opção de simulação, demonstrando tanto ordem de retirada, quanto busca de quantidade de medicamentos.
+5. Simulações com FIFO, LIFO, e busca binária podem ser acessadas em respectivos menus após opção `[6]`, demonstrando tanto ordem de retirada, quanto busca de quantidade de medicamentos.
 
 <br>
 
@@ -49,31 +49,32 @@ cd SEM1-CHALLENGE-DYNAMIC-PROGRAMMING
 
 - `calcular_valores_totais(nome)` | Verifica existência. Soma todas as quantidades de todas as unidades. Multiplica pelo `preco` do medicamento. Exibe total de unidades e valor total.
 
-- `cadastrar_medicamento(nome, tipo, usos, preco, preco_ideal)` | Cria ou sobrescreve uma nova entrada no arquivo `estoque.json`. Estrutura interna: informações fixas + subdicionário `unidades` inicialmente vazio.
+- `cadastrar_medicamento(nome, tipo, usos, preco, preco_ideal)` | Cria ou sobrescreve uma nova entrada temporária no arquivo `estoque.json`. Estrutura interna: informações fixas + subdicionário `unidades` inicialmente vazio.
 
 - `adicionar_lugar(nome, lugar, qtd, ideal)` | Acessa um medicamento existente. Adiciona/atualiza uma chave de unidade `lugar` com valores de `quantidade` e `ideal`.
 
 - `atualizar_quantidade(nome, lugar, nova_qtd)` | Garante que o medicamento e o local existem. Substitui a quantidade atual pela nova informada.
 
-- `atualizar_ideal(nome, lugar, novo_ideal)` | Mesmo processo da função anterior, mas atualiza o valor ideal da unidade.
+- `atualizar_ideal(nome, lugar, novo_ideal)` | Mesmo processo da função anterior, mas atualiza a quantidade ideal da unidade.
 
 - `fifo_simulacao(lista)` | Recebe uma lista (simulando entradas em ordem). Remove o primeiro elemento com `pop(0)`. Imprime o item removido até a lista esvaziar.
 
 - `menu_fifo()` | Menu em loop para manipular a lista FIFO. Adiciona itens no final da lista. Remove do início (`pop(0)`). Sai com a opção `[3]`.
 
-- `lifo_simulacao(lista)` | Mesma lógica da FIFO, mas remove o último item inserido (`pop()`).
+- `lifo_simulacao(lista)` | Possui lógica similar à da função `fifo_simulacao(lista)`, porém remove o último item inserido (`pop()`).
 
-- `menu_lifo()` | Interface interativa similar ao `menu_fifo()`, mas segue a lógica de pilha (último a entrar é o primeiro a sair).
+- `menu_lifo()` | Interface interativa similar à da função `menu_fifo()`, porém segue o método de pilha (último a entrar é o primeiro a sair).
 
 - `busca_binaria(lista, alvo)` | Recebe uma lista ordenada numericamente e um valor `alvo`. Usa os ponteiros `inicio` e `fim` para buscar o meio iterativamente. Retorna o índice do valor ou `-1` se não encontrado.
 
 <br>
 
 # OBSERVAÇÕES
-- Os dados presentes no arquivo `estoque.json` são generalizados, não condizem com a real distribuição de medicamentos e não são manipuladas externamente do sistema.
-- A estrutura do dicionário presente em `estoque.json` pode ser expandida para incluir mais dados relevantes.
-- O projeto pode ser adaptado facilmente para integrar com sistemas maiores ou interfaces gráficas.
-- Cada execução de código do projeto é única (sem salvamento), sendo apenas operada via terminal, com feedback imediato ao usuário.
+- O sistema não implementa autenticação ou controle de acesso, sendo recomendado apenas para fins educacionais ou ambientes controlados.
+- Cada execução do código é independente e operada exclusivamente via terminal, com feedback imediato ao usuário e sem persistência automática entre sessões.
+- As simulações são executadas de forma isolada e não afetam o estoque.
+- Os dados presentes no arquivo `estoque.json` são generalizados, não correspondem à real distribuição de medicamentos e não são manipulados externamente ao sistema.
+- A estrutura do dicionário presente em `estoque.json` pode ser expandida para incluir mais informações relevantes.
 
 <br>
 
@@ -83,4 +84,10 @@ cd SEM1-CHALLENGE-DYNAMIC-PROGRAMMING
 <br>
 
 # REFERÊNCIAS
-- **[Exemplo com título exatamente igual]()**
+- **[FIFO, FEFO e LIFO: o que são e quando utilizá-los](https://www.totvs.com/blog/gestao-logistica/fifo-fefo-e-lifo)**
+- **[Estrutura de dados: o que é, tipos e relação com algoritmos](https://pm3.com.br/blog/estrutura-de-dados)**
+- **[5. Data Structures — Python 3.13.3 documentation](https://docs.python.org/3/tutorial/datastructures.html)**
+- **[Dictionaries in Python](https://www.geeksforgeeks.org/python-dictionary)**
+- **[Python JSON](https://www.w3schools.com/python/python_json.asp)**
+- **[Binary Search (Recursive and Iterative) – Python](https://www.geeksforgeeks.org/python-program-for-binary-search)**
+- **[8. Errors and Exceptions — Python 3.13.3 documentation](https://docs.python.org/3/tutorial/errors.html)**
