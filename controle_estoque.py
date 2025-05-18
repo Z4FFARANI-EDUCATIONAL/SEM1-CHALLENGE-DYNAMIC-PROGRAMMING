@@ -177,7 +177,7 @@ def menu_lifo():
 
 
 def busca_binaria(lista, alvo):
-    print("\nBusca Binária:")
+    print("\nBusca binária:")
     lista.sort()
     inicio, fim = 0, len(lista) - 1
     while inicio <= fim:
@@ -203,7 +203,7 @@ def menu():
         print("[3] Buscar quantidade por unidade")
         print("[4] Verificar preço ideal")
         print("[5] Calcular valores totais")
-        print("[6] Simulações (FIFO, LIFO, Busca binária)")
+        print("[6] Simulações (FIFO | LIFO | Busca binária)")
         print("[0] Sair")
 
         try:
