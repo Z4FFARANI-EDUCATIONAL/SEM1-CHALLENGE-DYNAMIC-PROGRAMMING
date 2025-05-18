@@ -24,8 +24,10 @@ def buscar_quantidade(lugar):
     encontrado = False
     for nome, dados in estoque.items():
         local = dados["presente"].get(lugar.lower())
+        acima_ideal = local['quantidade'] > local['ideal'] if local else False
+        diferenca = local['quantidade'] - local['ideal'] if local else 0
         if local:
-            print(f"- {nome.capitalize()}: {local['quantidade']} unidades (Ideal: {local['ideal']})")
+            print(f"- {nome.capitalize()}: {local['quantidade']} unidades | {f'{diferenca} extras' if acima_ideal else 'Ideal'}")
             encontrado = True
     if not encontrado:
         print("❌ Nenhum medicamento encontrado nessa unidade.")
@@ -36,8 +38,9 @@ def verificar_preco_ideal(nome):
     if med:
         atual = med['preco_unidade']
         ideal = med['preco_unidade_ideal']
+        diferenca = atual - ideal
         print(f"\n💲 Atual: R$ {atual:.2f} | Ideal: R$ {ideal:.2f}")
-        print("✅ Dentro do ideal." if atual <= ideal else "⚠️  Acima do ideal.")
+        print("✅ Dentro do ideal." if atual <= ideal else f"⚠️  Acima do ideal | Diferença: R$ {diferenca:.2f}")
     else:
         print("❌ Medicamento não encontrado.")
 
@@ -106,7 +109,7 @@ def menu_fifo():
     fila_fifo = []
 
     while True:
-        print("\nFIRST IN, FIRST OUT")
+        print("\nFIRST IN, FIRST OUT | DASA\n")
         print("[1] Adicionar medicamento")
         print("[2] Executar FIFO")
         print("[3] Listar fila")
@@ -146,7 +149,7 @@ def menu_lifo():
     pilha_lifo = []
 
     while True:
-        print("\nLAST IN, LAST OUT")
+        print("\nLAST IN, LAST OUT | DASA\n")
         print("[1] Adicionar medicamento")
         print("[2] Executar LIFO")
         print("[3] Listar pilha")
@@ -177,13 +180,13 @@ def menu_lifo():
 
 
 def busca_binaria(lista, alvo):
-    print("\nBusca binária:")
     lista.sort()
+    print("\nLista ordenada:", lista, "| Alvo:", alvo)
     inicio, fim = 0, len(lista) - 1
     while inicio <= fim:
         meio = (inicio + fim) // 2
         if lista[meio] == alvo:
-            print(f"✅ Encontrado: {alvo} na posição {meio + 1}")
+            print(f"✅ Alvo encontrado: {alvo} na posição {meio + 1}")
             return
         elif lista[meio] < alvo:
             inicio = meio + 1
